@@ -20,7 +20,7 @@ const GetReady = () => {
           </span>
           <br /> Life On Belief ?
         </h1>
-        <p className="box-border h-auto w-[500px] p-4 border-2 border-black mt-4 text-center text-lg">
+        <p className="box-border h-auto w-[50%] p-4 border-2 border-black mt-4 text-center text-lg">
           The RedPhantom Group is a great resource for reshaping youth and
           communities towards success, with a particular emphasis on youth
           development.

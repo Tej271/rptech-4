@@ -11,7 +11,7 @@ function NavBar() {
       </div>
 
       {/* Menu Items and Search Icon */}
-      <div className="flex flex-row justify-between items-center w-[50%]  text-lg">
+      <div className="flex-row justify-between items-center w-[50%] text-lg hidden lg:flex">
         {[
           "Home",
           "About us",
@@ -32,6 +32,11 @@ function NavBar() {
           </h1>
         ))}
         <BsSearch />
+      </div>
+      <div className="block lg:hidden p-4 space-y-2">
+        <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
+        <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
+        <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
       </div>
     </div>
   );
