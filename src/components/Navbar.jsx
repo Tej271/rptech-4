@@ -1,8 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import RPLogo from "../assets/logo.png";
 import { BsSearch } from "react-icons/bs";
+import MobileMenu from "./MobileMenu";
 
 function NavBar() {
+  const [show, setShow] = useState(false);
+
   return (
     <div className="flex flex-row justify-around p-[2%]">
       {/* Brand Logo */}
@@ -33,11 +36,17 @@ function NavBar() {
         ))}
         <BsSearch />
       </div>
-      <div className="block lg:hidden p-4 space-y-2">
+      <div
+        className="block lg:hidden p-4 space-y-2"
+        onClick={() => {
+          setShow(!show);
+        }}
+      >
         <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
         <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
         <span className="block lg:hidden w-8 h-0.5 bg-black animate-pulse"></span>
       </div>
+      <MobileMenu open={show} setOpen={setShow} />
     </div>
   );
 }
